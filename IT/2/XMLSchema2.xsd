@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.imdb.com/movies" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ac="http://www.imdb.com/movies" 
+		   targetNamespace="http://www.imdb.com/movies" elementFormDefault="qualified">
+	<xs:annotation >
+		<xs:documentation xml:lang="en">
+		Movies xml schema
+		</xs:documentation>
+	</xs:annotation>
+
+	<xs:element name="movies" type="MoviesType">
+
+	</xs:element>
+<!--Types-->	
+	<xs:complexType name="MoviesType">
+		<xs:sequence>
+			<xs:element name = "movie" type = "MovieType" maxOccurs="unbounded">
+				<!-- 8 -->
+				<xs:unique name ="MovieActorsName" >
+					<xs:selector xpath="ac:starring"/>
+					<xs:field xpath ="@as"/>
+				</xs:unique>
+				<xs:keyref name="KeyStarring" refer="MovieActorsName" >
+					<xs:selector xpath="."/>
+					<xs:field xpath="@lng"/>
+				</xs:keyref>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="MovieType">
+		<xs:sequence>
+			<xs:element name = "userScores" type="userScoreType"/>
+			<!-- 7 -->
+			<xs:choice maxOccurs="1">
+				<xs:element name="geras" type="ImpressionsType"/>
+				<xs:element name="blogas" type="ImpressionsType"/>
+				<xs:element name="fantastiskas" type="ImpressionsType"/>
+			</xs:choice>
+			<xs:element name = "directedBy" type="DirectorsExtendedRestrictedType"/>
+			<xs:element name = "screenplayBy" maxOccurs="unbounded"/>
+			<xs:element name = "starring"  type="StarringType" maxOccurs="5" />
+			<xs:element name = "musicBy" />
+			<xs:element name = "releaseDate" type="ReleaseDateType"/>
+			<xs:element name = "language" type="xs:string" maxOccurs="10" />
+			<xs:element name = "budget" type="BudgetType"/>
+			<xs:element name = "plot" type="PlotExtendedRestrictedType"/>
+			<xs:element name = "nominations" type="NominationsType"/>
+		</xs:sequence>
+		<xs:attribute name="lng" type="xs:string"/>
+		<xs:attribute name="name" type = "xs:string"/>
+		<xs:attribute name="IMDB" type = "xs:decimal"/>
+	</xs:complexType>
+<!-- 1 -->	
+	<xs:simpleType name="ImpressionsType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+<!-- 2 -->
+	<xs:simpleType name="userScoreType">
+		<xs:list itemType="xs:integer"/>
+	</xs:simpleType>
+	
+	<xs:complexType name="StarringType" mixed="true">
+		<xs:attribute name="as" type = "xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="ReleaseDateType" mixed="true">
+		<xs:attribute name="country" type = "xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="BudgetType" mixed="true">
+		<xs:attribute name="currency" type = "xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="PlotType" mixed="true">
+		<xs:attribute name="writtenBy" type = "xs:string"/>
+	</xs:complexType>
+
+	
+	<xs:complexType name="NominationsType">
+		<xs:sequence>
+			<xs:element name = "award" maxOccurs="unbounded" minOccurs="0">
+				<xs:complexType >
+					<xs:sequence>
+						<xs:element name = "subject" minOccurs="0" maxOccurs="unbounded" type="SubjectType"/>					
+					</xs:sequence>
+					<xs:attribute name="name" type = "xs:string"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SubjectType">
+		<xs:sequence>
+			<xs:element name="nominee" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type = "xs:string"/>
+		<xs:attribute name="result" type = "xs:string"/>
+	</xs:complexType>
+	<xs:simpleType name="DirectorType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+<!-- 3 -->
+	<xs:complexType name="DirectorsExtendedType" >
+		<xs:simpleContent>
+			<xs:extension base="DirectorType">
+				<xs:attribute name="pravarde" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+
+	<xs:complexType name="DirectorsExtendedRestrictedType">
+		<xs:simpleContent>
+			<xs:restriction base="DirectorsExtendedType">
+				<xs:maxLength value="256"/>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+<!-- 4 ir 6 -->
+	<xs:complexType name="PlotExtendedType" mixed ="true">
+		<xs:complexContent >
+			<xs:extension base="PlotType">
+				<xs:attribute name="EEEmakarena" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+		
+	</xs:complexType>
+
+	<xs:complexType name="PlotExtendedRestrictedType" mixed="true">
+		<xs:complexContent >
+			<xs:restriction base="PlotExtendedType">
+				<xs:attribute name="EEEmakarena" type="xs:int"/>
+			</xs:restriction>
+		</xs:complexContent>
+
+	</xs:complexType>
+	
+</xs:schema>

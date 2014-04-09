@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<movies xmlns="http://www.imdb.com/movies"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imdb.com/movies XMLSchema2.xsd">
+	<movie lng="Djnjanefhlskhdfishss" name="In a Better World" IMDB="7.7" >
+		<userScores>1 2 3 4 5 6 7</userScores>
+		<geras/>
+		<directedBy>Susanne Bier</directedBy>
+		<screenplayBy>Anders Thomas Jensen</screenplayBy>
+		<starring as="Anton">Mikael Persbrandt</starring>
+		<starring as="Marianne">Trine Dyrholm</starring>
+		<starring as="Claus">Ulrich Thomsen</starring>
+		<starring as="Jonathan Carnahan">John Hannah</starring>
+		<musicBy>	</musicBy>
+		<releaseDate country="Dennmark">2010.08.26</releaseDate>
+		<language>Danish</language>
+		<language>Swedish</language>
+		<language>English</language>
+		<language>Arabic</language>
+		<language>Catalan</language>
+		<language>Spanish</language>
+		<budget currency="DKK">30000000</budget>
+		<plot writtenBy="sisse-graum">The story traces  elements from a drab refugee camp in Sudan to the gray humdrum of everyday life in a Danish provincial town. The lives of two Danish families cross each other, and an extraordinary but risky friendship comes into bud. But loneliness, frailty and sorrow lie in wait. Soon, friendship transforms into a dangerous alliance and a breathtaking pursuit in which life is at stake.</plot>
+		<nominations>
+			<award name="Academy Awards">
+				<subject name="Best Foreign Language Film" result="won"/>
+			</award>
+			
+			<award name="Rome International Film Festival 2010">
+				<subject name="Marc Aurelio Audience Award for Best Film" result="won"/>
+				<subject name="Marc Aurelio Grand Jury Award" result="won"/>
+			</award>
+		</nominations>
+	</movie>
+	
+	<movie name="The Mummy" IMDB="7.0">
+		<userScores>7 8 9 9 6 7</userScores>
+		<blogas/>
+		<directedBy>Stephen Sommers</directedBy>
+		<screenplayBy>Sean Daniel</screenplayBy>
+		<screenplayBy>James Jacks</screenplayBy>
+		<starring as="Anton">Mikael Persbrandt</starring>
+		<starring as="Rick O'Connell">Brendan Fraser</starring>
+		<starring as="Evelyn Carnahan">Rachel Weisz</starring>
+		
+		<starring as="High Priest Imhotep">Arnold Vosloo</starring>
+		<starring as="Beni Gabor">Jonathan Hyde</starring>
+		<musicBy>Jerry Goldsmith</musicBy>
+		<releaseDate country="United States">1999.05.07</releaseDate>
+		<language>English</language>
+		<budget currency="$">80000000</budget>
+		<plot writtenBy="Film_Fan" EEEmakarena="45">
+		An English librarian called Evelyn Carnahan becomes interested in starting an archaeological dig at the ancient city of Hamunaptra. She gains the help of Rick O'Connell, after saving him from his death. What Evelyn, her brother Jonathan and Rick are unaware of is that another group of explorers are interested in the same dig. Unfortunately for everyone, this group ends up unleashing a curse which been laid on the dead High Priest Imhotep. Now 'The Mummy' is awake and it's going to take a lot more than guns to send him back from where he came from.</plot>
+		<nominations>
+			<award name="Academy Awards">
+				<subject name="Best Sound Mixing" result="Nominated">
+					<nominee>Leslie Shatz</nominee>
+					<nominee>Chris Carpenter</nominee>
+					<nominee>Rick Kline</nominee>
+					<nominee>Chris Munro</nominee>
+				</subject>
+			</award>
+			<award name="MTV Movie Awards">
+				<subject name="Best Action Sequence" result="Nominated">
+					
+				</subject>
+			</award>
+				<award name="Golden Reel Awards">
+				<subject name="Best Sound Editing - Effects and Foley" result="Nominated">
+					<nominee>Mark Pappas</nominee>
+					<nominee>Thom Brennan</nominee>
+					<nominee>Richard Burton</nominee>
+					<nominee>Jonathan Klein</nominee>
+					<nominee>Leslie Shatz</nominee>
+				</subject>
+			</award>
+		</nominations>
+	</movie>
+</movies>
