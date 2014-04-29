@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
-<movies xmlns="http://www.imdb.com/movies"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imdb.com/movies XMLSchema2.xsd">
-	<movie lng="Djnjanefhlskhdfishss" name="In a Better World" IMDB="7.7" >
+<?xml-stylesheet href="transf.xslt" type="text/xsl"?>
+<movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imdb.com/movies XMLSchema2.xsd">
+	<movie lng="Anton" name="In a Better World" IMDB="7.7" >
 		<userScores>1 2 3 4 5 6 7</userScores>
 		<geras/>
 		<directedBy>Susanne Bier</directedBy>
 		<screenplayBy>Anders Thomas Jensen</screenplayBy>
 		<starring as="Anton">Mikael Persbrandt</starring>
+		
 		<starring as="Marianne">Trine Dyrholm</starring>
 		<starring as="Claus">Ulrich Thomsen</starring>
 		<starring as="Jonathan Carnahan">John Hannah</starring>
@@ -29,6 +30,9 @@
 				<subject name="Marc Aurelio Audience Award for Best Film" result="won"/>
 				<subject name="Marc Aurelio Grand Jury Award" result="won"/>
 			</award>
+			<superaward>
+				
+			</superaward>
 		</nominations>
 	</movie>
 	
@@ -73,6 +77,7 @@
 					<nominee>Leslie Shatz</nominee>
 				</subject>
 			</award>
+			<superaward/>
 		</nominations>
 	</movie>
 </movies>

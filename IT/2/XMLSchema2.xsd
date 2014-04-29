@@ -47,6 +47,7 @@
 			<xs:element name = "plot" type="PlotExtendedRestrictedType"/>
 			<xs:element name = "nominations" type="NominationsType"/>
 		</xs:sequence>
+		<!--5-->
 		<xs:attribute name="lng" type="xs:string"/>
 		<xs:attribute name="name" type = "xs:string"/>
 		<xs:attribute name="IMDB" type = "xs:decimal"/>
@@ -89,6 +90,7 @@
 					<xs:attribute name="name" type = "xs:string"/>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="superaward" />
 		</xs:sequence>
 	</xs:complexType>
 
