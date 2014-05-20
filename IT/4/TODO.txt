@@ -1,0 +1,10 @@
+HTML, CSS (0.5 balo): reikia parašyti HTML puslapi, kuriame butu naudojamos tik strukturines žymes (išvardintos HTML5 dokumente). Negalima naudoti puslapio stiliu nusakanciu žymiu bei atributu (color, font, size, ir panašiai). Stilio aprašymui reikia sukurti stiliu lentele, aprašyta atskirame faile. Turi buti patenkinti šie reikalavimai:
+Reikia panaudoti šiuos selektorius (ir moketi paaiškinti, kuo pirmas skiriasi nuo antro, bei ka jie visi reiškia):
+Ipedinio (descendant);
+Vaiko (child);
+Atributo (attribute);
+Klases (class);
+ID
+Sukurtoje stiliu lenteleje turi buti savybiu paveldejimo pavyzdys, t.y., butina prasmingai panaudoti raktini žodi inherit (t.y., ištrynus ši raktini žodi, vaizdas ekrane turi pasikeisti) ir žinoti, ka jis reiškia;
+Sukurtoje stiliu lenteleje turi buti kaskadu mechanizmo pavyzdys, butina prasmingai panaudoti raktini žodi !important (t.y., ištrynus ši raktini žodi, vaizdas ekrane turi pasikeisti), bei žinoti, ka jis reiškia ir kas yra tas kaskadu mechanizmas;
+Reikia panaudoti @media taisykle (pvz., pademonstruoti puslapio pavyzdi, kuris pavaizduotas ekrane skiriasi nuo atspausdinto (vietoj spausdinimo galima naudoti print preview))
