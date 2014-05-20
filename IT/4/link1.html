@@ -8,65 +8,67 @@
             @import url("print.css") print 
         </style> 
         <meta charset="utf-8">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+        function pirma()
+        {
+           if ($("#vardas").val() === "") 
+           {
+            console.log("Reikia ka nors ivesti");
+           }            
+        }
+        
+        function antra()
+        {
+           if (!isNaN($("#vardas2").val())) 
+           {
+            console.log("reikia ivesti skaiciu");
+           }            
+        }
+        
+        function checkDate(yearStr, monthStr, dayStr) 
+            {
+            
+            }
+
+            
+    </script>   
     </head>
     
     <body>
+     
     <header>
     <a href ="index.html">Link 1</a> <a href ="">Link 2</a> <a href ="">Link 3 </a>
     </header>
     <article>
-        <h1>Kawasaki disease</h1>
-        <p><b>Kawasaki</b> disease, a mysterious and sometimes fatal childhood illness first identified in Japan, has been traced to the croplands of northeastern China, scientists report today in Proceedings of the National Academy of Sciences1.
-</p>
-
-<p>
-Stem-cell method carries low risk of tumours
-What cosmologists could still learn from the CMB
-Russia to end Space Station collaboration in 2020
-The disease, an inflammation of the blood vessels that primarily affects children aged 5 or under, produces a variety of dramatic symptoms, including fever, rash and what is aptly described as 'strawberry tongue'. Roughly a quarter of untreated children also develop aneurysms in the blood vessels of their hearts that kill 1% outright and can cause heart attack years later in survivors.
-</p>
-<p>
-The condition’s cause is unknown despite almost half a century of research, although a previous study2 suggested that this might be a disease-inducing agent that is carried by the wind to Japan, and then across the Pacific Ocean to the western United States, from a source somewhere in Asia.</p>
-<p>
-Now researchers believe that they have narrowed down the disease’s origins further, to the vast farmlands of northeastern China where maize (corn), rice and wheat are grown.</p>
-<p>
-The team analysed infection records for Japan's 47 prefectures to determine the start and peak of Kawasaki epidemics in 1979, 1982, and 1986, and seasonal outbreaks between 1987-2010. They then examined wind patterns before and during the epidemics in 3-hour chunks, seeking to identify the last place at which winds had ebbed appreciably before they reached Japan. The team suspected that this would pinpoint Kawasaki’s source because wind masses tend to drop particles of dirt or biological matter — and pick up new ones — as they slow.</p>
-<p>
-Related stories
-Infectious disease: Blowing in the wind
-'Rain-making' bacteria found around the world
-Earth sows its seeds in space
-More related stories
-The researchers also calculated the likely incubation time for the disease — 6 hours to 2.5 days, but probably less than 24 hours — by comparing the arrival time of winds from the source region in China with the timing of the first diagnosed cases during various epidemics.</p>
-<p anything="h">
-Toxic origins
-Kawasaki’s relatively quick onset rules out a viral cause, the researchers say, because incubation time for most viral infections is several hours longer. “The incubation time suggests we should be looking in a very different direction,” says study co-author Jane Burns, a paediatrics researcher at the University of California, San Diego</p>
-<p>
-Instead, Burns and colleagues suspect a wind-borne toxin made by a plant, fungus or bacterium. If a wind-borne toxin is indeed responsible, it would be the first disease known to operate in this way, Burns says.</p>
-<p>
-Intriguingly, air samples that the researchers collected from winds blowing from northeastern China to Japan contained an unexpectedly high quantity of the fungus Candida.</p>
-<p>
-“I think there is evidence that [Kawasaki disease] looks like other bacterial toxin diseases,” says Samuel Dominguez, a paediatric infectious-disease specialist at the University of Colorado School of Medicine in Aurora.</p>
-<p>
-But David Battisti, an atmospheric scientist at the University of Washington in Seattle, questions whether northeastern China is the region of origin of Kawasaki's causative agent. He notes that outbreaks of the disease tend to occur in Japan during winter and early spring, when cropland in northeastern China is frozen solid, and winds would not stir up many particles.</p>
-<p>
-“it's an open question still whether the source region is northeast China, or maybe even further west,” he says.
- </p>
-
-
- 
-<p>
-Nature doi:10.1038/nature.2014.15252
-References</p>
-<p>
-Rodó, X. et al. Proc. Natl Acad. Sci. USA http://dx.doi.org/10.1073/pnas.1400380111 (2014).
-Show context
-Rodó, X. et al. Sci. Rep. 1, 152; http://dx.doi.org/10.1038/srep00152 (2011).
-Show context
-
-</p>
-        out <b>of</b> p
-        </article>
+       <h1>
+       <form name="formosPavadinimas"> 
+    JavaScript/JQuery (0.5 balo): skriptai turi būti aprašyti atskirame faile. Turi būti patenkinti šie reikalavimai:</h1>
+        <h2>Reikia pademonstruoti formos laukų validavimą:</h2>
+           <ol>
+        <p>
+        
+            <li>Įvedimo laukas, kuriame kažkas turi būti įvesta (kuris negali būti paliktas tuščias);</li>
+           <input type ="text"  onblur= "pirma()" id ="vardas2"/> 
+           </p>
+<li>Įvedimo laukas, kuriame turi būti įvestas sveikas teigiamas skaičius;</li>
+     <input type ="text"  onblur= "antra()" id ="vardas"/> 
+<li>Įvedimo laukas (-ai), kuriame (-iuose) turi būti įvesta teisinga data (metai, mėnuo, diena) (pvz., vasaris negali turėti 30 dienų); būtina naudoti Date objektą, t.y., draudžiama patiems rašyti teisingos datos tikrinimo algoritmą (metai nebūtinai keliamieji, jei jie dalinasi iš 4!</li> 
+               <input type ="text"  onblur= "antra()" id ="vardas"/>           
+<li>Teisingas algoritmas žymiai sudėtingesnis).</li>
+Reikia panaudoti reguliarias išraiškas (RegExp):
+Pademonstruoti paiešką su reguliariomis išraiškomis, naudojant šiuos specialius simbolius: ?, *, +, \s, \w, \d, aibės konstrukciją [...];
+Pademonstruoti skliaustelių () panaudojimą teksto fragmentų įsiminimui ir tų fragmentų paėmimą iš masyvo, kurį grąžina RegExp.exec() metodas;
+Pademonstruoti, kaip specialūs simboliai " $1 ", " $2 ", naudojami String.replace() metode;
+Pademonstruoti metodo String.split() veikimą, kai parametru paduodama reguliari išraiška.
+JQuery bibliotekos pagalba reikia pademonstruoti kokių nors puslapio elementų paslėpimą/parodymą (ne išmetimą!) panaudojant CSS savybę display, priklausomai nuo to, kas įvesta kokiame nors formos lauke;
+JQuery bibliotekos pagalba reikia pademonstruoti HTML puslapio dinaminio modifikavimo galimybes. Turi būti tenkinami šie reikalavimai:
+Egzistuojančių HTML dokumento žymių tekstinio turinio pakeitimas (pvz., paragrafo teksto pakeitimas)
+Egzistuojančių žymių stiliaus pakeitimas (atributui style priskiriant naują reikšmę)
+Egzistuojančių žymių išmetimas (pvz., ištrinti įvedimo lauke numeriu nurodytą paragrafą)
+Naujų žymių įterpimas (pvz., teksto gale pridėti paragrafą su tekstu, įvestu įvedimo lauke)
+        </ol>
+           </article>
 
     </body>
 </html>

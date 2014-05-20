@@ -5,7 +5,7 @@
         </title>  
         <style type="text/css"> 
             @import url("main.css"); 
-            @import url("print.css") print 
+            @import url("print.css") print ;
         </style> 
         <meta charset="utf-8">
     </head>
@@ -18,13 +18,13 @@
     <h1> Trys dalys: HTML, CSS ir JavaScript/JQuery (1 balas, atsiskaityti galima iki paskutinių pratybų)</h1>
         <h2>HTML, CSS (0.5 balo):</h2>
         <p>reikia parašyti HTML puslapį, kuriame būtų naudojamos tik struktūrinės žymės (išvardintos HTML5 dokumente). </p><b>Negalima naudoti puslapio stilių nusakančių žymių bei atributų (color, font, size, ir panašiai)</b>.<p>Stilio aprašymui reikia sukurti stilių lentelę, aprašytą atskirame faile. <b>Turi būti patenkinti šie reikalavimai:</b></p>
-        <p>Dokumentas privalo būti validus HTML5 dokumentas. Validatoriai:
+        <p>Dokumentas privalo būti validus HTML5 dokumentas. Validatoriai:</p>
             <ul>
                 <li>http://validator.nu</li>
                 <li>http://validator.w3.org</li>
-            </ul></p>
+            </ul>
         <p>
-        Reikia panaudoti šiuos selektorius (ir mokėti paaiškinti, kuo pirmas skiriasi nuo antro, bei ką jie visi reiškia):
+        Reikia panaudoti šiuos selektorius (ir mokėti paaiškinti, kuo pirmas skiriasi nuo antro, bei ką jie visi reiškia):</p>
             <ol>
                 <li >Įpėdinio (descendant);</li>
                 <li><div>Vaiko (child);</div></li>
@@ -32,14 +32,34 @@
                 <li class ="klase">Klasės (class);</li>
                 <li id = "identifikatorius">ID</li>
             </ol>   
-        </p>
-        <p>
+        
+        
          <div>   Sukurtoje stilių lentelėje turi būti savybių paveldėjimo pavyzdys, t.y., būtina prasmingai panaudoti raktinį žodį inherit (t.y., ištrynus šį raktinį žodį, vaizdas ekrane turi pasikeisti) 
                 <span>ir žinoti, ką jis reiškia;</span></div>
                 
-    </p>
+    
     
       <p>Sukurtoje stilių lentelėje turi būti kaskadų mechanizmo pavyzdys, būtina prasmingai panaudoti raktinį žodį !important (t.y., ištrynus šį raktinį žodį, vaizdas ekrane turi pasikeisti), bei žinoti, ką jis reiškia ir kas yra tas kaskadų mechanizmas;</p>
+    
+    <table>
+        <thead>
+        <tr>
+            <td>a            </td>
+            <td>a            </td>
+        </tr>
+        </thead>
+        <tbody >
+        <tr>
+            <td>a            </td>
+            <td>a            </td>
+        </tr>
+        <tr  id = "makeItGrey">
+            <td class = "makeItGreen">a            </td>
+            <td class = "makeItRed" style="background-color:green">a            </td>
+        </tr>
+          </tbody>
+    </table>
+
         <p>Reikia panaudoti @media taisyklę (pvz., pademonstruoti puslapio pavyzdį, kuris pavaizduotas ekrane skiriasi nuo atspausdinto (vietoj spausdinimo galima naudoti print preview))</p>
         
         </article>
