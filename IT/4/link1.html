@@ -8,31 +8,9 @@
             @import url("print.css") print 
         </style> 
         <meta charset="utf-8">
-        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script>
-        function pirma()
-        {
-           if ($("#vardas").val() === "") 
-           {
-            console.log("Reikia ka nors ivesti");
-           }            
-        }
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js">          </script>
+ 	<script type="text/javascript" src="script.js"></script>
         
-        function antra()
-        {
-           if (!isNaN($("#vardas2").val())) 
-           {
-            console.log("reikia ivesti skaiciu");
-           }            
-        }
-        
-        function checkDate(yearStr, monthStr, dayStr) 
-            {
-            
-            }
-
-            
-    </script>   
     </head>
     
     <body>
@@ -41,7 +19,7 @@
     <a href ="index.html">Link 1</a> <a href ="">Link 2</a> <a href ="">Link 3 </a>
     </header>
     <article>
-       <h1>
+       <h1></h1>
        <form name="formosPavadinimas"> 
     JavaScript/JQuery (0.5 balo): skriptai turi būti aprašyti atskirame faile. Turi būti patenkinti šie reikalavimai:</h1>
         <h2>Reikia pademonstruoti formos laukų validavimą:</h2>
@@ -49,25 +27,52 @@
         <p>
         
             <li>Įvedimo laukas, kuriame kažkas turi būti įvesta (kuris negali būti paliktas tuščias);</li>
-           <input type ="text"  onblur= "pirma()" id ="vardas2"/> 
+           <input type ="text"  onblur= "neTuscia()" name ="tuscias"/> 
            </p>
 <li>Įvedimo laukas, kuriame turi būti įvestas sveikas teigiamas skaičius;</li>
-     <input type ="text"  onblur= "antra()" id ="vardas"/> 
-<li>Įvedimo laukas (-ai), kuriame (-iuose) turi būti įvesta teisinga data (metai, mėnuo, diena) (pvz., vasaris negali turėti 30 dienų); būtina naudoti Date objektą, t.y., draudžiama patiems rašyti teisingos datos tikrinimo algoritmą (metai nebūtinai keliamieji, jei jie dalinasi iš 4!</li> 
-               <input type ="text"  onblur= "antra()" id ="vardas"/>           
-<li>Teisingas algoritmas žymiai sudėtingesnis).</li>
+     <input type ="text"  onblur= "arSkaicius()" name ="skaicius"/> 
+<li>Įvedimo laukas (-ai), kuriame (-iuose) turi būti įvesta teisinga data (metai, mėnuo, diena) (pvz., vasaris negali turėti 30 dienų); būtina naudoti Date objektą, t.y., draudžiama patiems rašyti teisingos datos tikrinimo algoritmą (metai nebūtinai keliamieji, jei jie dalinasi iš 4! Teisingas algoritmas žymiai sudėtingesnis).</li> 
+            <input type="text" name="metai" onblur="arData()"/>
+            <input type="text" name="menuo" onblur="arData()"/>
+            <input type="text" name="diena" onblur="arData()"/>
+<li>
 Reikia panaudoti reguliarias išraiškas (RegExp):
-Pademonstruoti paiešką su reguliariomis išraiškomis, naudojant šiuos specialius simbolius: ?, *, +, \s, \w, \d, aibės konstrukciją [...];
-Pademonstruoti skliaustelių () panaudojimą teksto fragmentų įsiminimui ir tų fragmentų paėmimą iš masyvo, kurį grąžina RegExp.exec() metodas;
-Pademonstruoti, kaip specialūs simboliai " $1 ", " $2 ", naudojami String.replace() metode;
-Pademonstruoti metodo String.split() veikimą, kai parametru paduodama reguliari išraiška.
-JQuery bibliotekos pagalba reikia pademonstruoti kokių nors puslapio elementų paslėpimą/parodymą (ne išmetimą!) panaudojant CSS savybę display, priklausomai nuo to, kas įvesta kokiame nors formos lauke;
-JQuery bibliotekos pagalba reikia pademonstruoti HTML puslapio dinaminio modifikavimo galimybes. Turi būti tenkinami šie reikalavimai:
-Egzistuojančių HTML dokumento žymių tekstinio turinio pakeitimas (pvz., paragrafo teksto pakeitimas)
-Egzistuojančių žymių stiliaus pakeitimas (atributui style priskiriant naują reikšmę)
-Egzistuojančių žymių išmetimas (pvz., ištrinti įvedimo lauke numeriu nurodytą paragrafą)
-Naujų žymių įterpimas (pvz., teksto gale pridėti paragrafą su tekstu, įvestu įvedimo lauke)
+    <ul>
+<li>Pademonstruoti paiešką su reguliariomis išraiškomis, naudojant šiuos specialius simbolius: ?, *, +, \s, \w, \d, aibės konstrukciją [...];</li>
+		<hr>
+			<br>  <input type="text" name="RegThing" onblur="doRegThing()"/>
+			<p id ="regPastraipa">
+		</p>
+		<hr>
+<li>Pademonstruoti skliaustelių () panaudojimą teksto fragmentų įsiminimui ir tų fragmentų paėmimą iš masyvo, kurį grąžina RegExp.exec() metodas;</li>
+		<hr>
+			<br>  <input type="text" name="RegThing2" onblur="doRegThing2()"/>
+			<p id ="regPastraipa2">
+		</p>
+		<hr>
+<li>Pademonstruoti, kaip specialūs simboliai " $1 ", " $2 ", naudojami String.replace() metode;</li>
+<li>Pademonstruoti metodo String.split() veikimą, kai parametru paduodama reguliari išraiška.</li></ul></li>
+			   
+<li>JQuery bibliotekos pagalba reikia pademonstruoti kokių nors puslapio elementų paslėpimą/parodymą (ne išmetimą!) panaudojant CSS savybę display, priklausomai nuo to, kas įvesta kokiame nors formos lauke;
+</li>
+			   <a href="http://google.com" id = "secretLink">SecretLink</a>
+			   <button onCLick="event.preventDefault();parodytiPaslepti()">parodytiSlaptaNuoroda</button>
+               
+<li>JQuery bibliotekos pagalba reikia pademonstruoti HTML puslapio dinaminio modifikavimo galimybes. Turi būti tenkinami šie reikalavimai:
+    <ul>
+<li>Egzistuojančių HTML dokumento žymių tekstinio turinio pakeitimas (pvz., paragrafo teksto pakeitimas)</li>
+<p id = "pastraipaTekstui"> tekstas</p>
+<input type="text" name="pastraipa" onblur="iveskPastraipa()"/>
+
+<li>Egzistuojančių žymių stiliaus pakeitimas (atributui style priskiriant naują reikšmę)</li>
+<input type="text" name="spalva" onblur="pastraiposSpalva()"/>
+<li>Egzistuojančių žymių išmetimas (pvz., ištrinti įvedimo lauke numeriu nurodytą paragrafą)</li>
+<button onCLick="event.preventDefault();pridetiPastraipa()">Prideti pastraipa</button>
+<li>Naujų žymių įterpimas (pvz., teksto gale pridėti paragrafą su tekstu, įvestu įvedimo lauke)</li>
+<button onCLick="event.preventDefault();istrintiPastraipa()">Pasalinti pastraipa</button>	
+</ul></li>
         </ol>
+           </form>
            </article>
 
     </body>
